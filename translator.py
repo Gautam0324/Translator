@@ -44,4 +44,4 @@ def translate():
 if __name__ == '__main__':
     app.run(debug=True)
 
-# http://127.0.0.1:5000 after run the code hit this in to your browser url section
+# http://127.0.0.1:5000 after run the code hit this in to your browser url section 
