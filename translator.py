@@ -22,10 +22,10 @@ html_template = '''
         <input type="submit" value="Translate">
     </form>
 
-    {% if translation %}
+    
         <h2>Translated Text (English):</h2>
         <p>{{ translation }}</p>
-    {% endif %}
+    
 </body>
 </html>
 '''
