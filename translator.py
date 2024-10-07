@@ -1,6 +1,6 @@
 from flask import Flask, request
-
 from deep_translator import GoogleTranslator
+
 
 app = Flask(__name__)
 
@@ -18,12 +18,13 @@ html_template = '''
     <h1>Hindi to English Translator</h1>
     <form method="POST" action="/">
         <label for="hindi_text">Enter Hindi text:</label><br><br>
-        <textarea id="hindi_text" name="hindi_text" rows="4" cols="50"></textarea><br><br>
+        <textarea id="hindi_text" name="hindi_text" rows="10" cols="100"  placeholder="Enter Hindi text here..."></textarea><br><br>
+
         <input type="submit" value="Translate">
     </form>
 
     
-        <h2>Translated Text (English):</h2>
+        <h2>Translated Text (English) :</h2>
         <p>{{ translation }}</p>
     
 </body>
@@ -42,3 +43,5 @@ def translate():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+# http://127.0.0.1:5000 after run the code hit this in to your browser url section
