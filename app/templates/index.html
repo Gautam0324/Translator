@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Counter</title>
+</head>
+<body>
+    <h1>Word Counter</h1>
+    <form method="POST">
+        <label for="paragraph">Enter Paragraph:</label><br>
+        <textarea id="paragraph" name="paragraph" rows="10" cols="50">{{ paragraph }}</textarea><br><br>
+        
+        <label for="word">Enter Word to Count:</label><br>
+        <input type="text" id="word" name="word" value="{{ word }}"><br><br>
+        
+        <input type="submit" value="Count">
+    </form>
+
+    {% if result is not none %}
+        <h2>Result:</h2>
+        <p>The word '{{ word }}' occurs {{ result }} times in the paragraph.</p>
+    {% endif %}
+</body>
+</html>
